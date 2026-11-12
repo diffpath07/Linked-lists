@@ -79,21 +79,3 @@ Place succ(Liste l, Place p) {
 }
 
 
-Liste supprimer(Liste l, int i) {
-    Place p, q;
-    if (i < 1 || i > longueur(l)) {
-        printf("Rang invalide \n");
-        exit(-1);
-    } else {
-        if (i == 1) {
-    p = l;
-            l = l->suivant;
-        } else {
-            q = acces(l, i-1);
-            p = succ(l, q);
-            q->suivant = p->suivant;
-        }
-    }
-    free(p);
-    return l;
-}
