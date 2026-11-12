@@ -1,20 +1,19 @@
 #ifndef _LISTE_CHAINEE
 #define _LISTE_CHAINEE
 
-// Définition du type liste (implémentée parpointeurs)
 
-typedef int Element; /* les éléments sont des int */
+typedef int Element; 
 
-typedef struct Cellule *Place; /* la place = adresse noeud */
+typedef struct Cellule *Place; 
 
 typedef struct Cellule {
-    Element valeur; /* un éléments de la liste */
-    struct Cellule *suivant; /* adresse Cellule suivante */
+    Element valeur; 
+    struct Cellule *suivant; // adresse Cellule suivante 
 } Cellule ;
 
 typedef Cellule *Liste;
 
-// Déclaration des fonctions gérant la liste
+// Déclaration des fonctions gerant la liste
 
 Liste liste_vide (void);
 
