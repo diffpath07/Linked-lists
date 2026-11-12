@@ -17,7 +17,7 @@ int longueur(Liste l) {
 }
 
 Liste inserer(Liste l, int i, Element e) {
-// précondition :1≤ i < longueur(l)+1
+
     if (i<1 || i>longueur(l)+ 1) {
         printf("Erreur : rang non valide !\n");
         exit(-1);
@@ -39,7 +39,6 @@ Liste inserer(Liste l, int i, Element e) {
 }
 
 Place acces(Liste l, int k) {
-// pas de sens que si 1 ≤ k ≤ longueur(l)
     int i;
     Place p;
     if (k<1 || k>longueur(l)) {
@@ -59,8 +58,7 @@ Place acces(Liste l, int k) {
 
 
 
-Element contenu(Liste l, Place p) {
-// pas de sens si longueur(l)=0 (liste vide)    
+Element contenu(Liste l, Place p) {  
     if (longueur(l) == 0) {
         printf("Erreur: liste vide !\n");
         exit(-1);
@@ -70,7 +68,6 @@ Element contenu(Liste l, Place p) {
 
 
 Place succ(Liste l, Place p) {
-// pas de sens si p dernière place de liste
     if (p->suivant == NULL) {
         printf("Erreur: suivant dernière place!\n");
         exit(-1);
